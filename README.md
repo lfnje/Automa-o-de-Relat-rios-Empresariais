@@ -66,6 +66,10 @@ Para sua equipe técnica ou para iniciar a operação desta solução:
 2.  **`data/`:** Posicione seus arquivos Excel de dados (`transacoes_AAAA_MM.xlsx`, `cadastros_AAAA_MM.xlsx`, etc.) nesta pasta, seguindo o padrão `nome_ANO_MES.xlsx`.
 3.  **`config_reports/report_definitions.yaml`:** Personalize as definições de cada relatório aqui. Você pode criar novos relatórios, ajustar colunas, agrupamentos e filtros de acordo com as necessidades específicas de negócio.
 
+### Próximos Passos: Tudo Pronto para a Ação!
+
+Com as configurações ajustadas e seus dados organizados, a solução está configurada e pronta para iniciar suas operações. Agora, você pode prosseguir para a seção de "Execução" para ver a automação em funcionamento e começar a gerar seus relatórios de forma eficiente.
+
 ### Execução
 
 Após a configuração, a operação é simples:
