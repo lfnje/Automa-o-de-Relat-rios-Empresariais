@@ -61,10 +61,11 @@ Para sua equipe técnica ou para iniciar a operação desta solução:
     
 ---
 ### Estrutura da Solução
-
+```bash
 <p align="center">
   <img src="img/Estrutura de Solução.png" alt="Estrutura de Solução para Automação" style="width:75%; max-width:600px;">
 </p>
+```
 
 ---
 
