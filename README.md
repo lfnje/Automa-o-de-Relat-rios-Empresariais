@@ -58,6 +58,15 @@ Para sua equipe técnica ou para iniciar a operação desta solução:
     ```bash
     pip install -r requirements.txt
     ```
+    
+---
+### Estrutura da Solução
+
+<p align="center">
+  <img src="" alt="Estrutura de Solução para Automação" style="width:100%; max-width:600px;">
+</p>
+
+---
 
 ### Ajustes Essenciais
 
@@ -89,8 +98,9 @@ Esta solução pode ser facilmente executada a partir do seu terminal integrado 
 
 Incentivamos a colaboração e o feedback para a melhoria contínua desta solução. Para sugestões, reportar um comportamento inesperado ou propor novas funcionalidades, por favor, **não hesite em entrar em contato através das redes abaixo:**
 
-* **Email** - [lfnjecorporativo@gmail.com](mailto:lfnjecorporativo@gmail.com)
-* **Linkedln** - [Linkedln[]]
+* **LinkedIn:** [linkedin.com/in/luizfilipenogueira](https://www.linkedin.com/in/luizfilipenogueira/)
+* **Email:** [lfnjecorporativo@gmail.com](mailto:lfnjecorporativo@gmail.com)
+* **Instagram:** [instagram.com/_lfnje/](https://www.instagram.com/_lfnje/)
 
 ---
 
