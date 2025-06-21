@@ -1,12 +1,11 @@
-# 🚀 Automação Inteligente de Relatórios Empresariais em Python 📊
+# 🚀 Automação de Relatórios Empresariais em Python 
 
 ---
 
 ## 🎯 Sobre Esta Solução
 
 Este projeto representa uma **solução estratégica e robusta para a automação de relatórios empresariais**, desenvolvida em Python. Meu principal objetivo com esta ferramenta é **otimizar e agilizar o processo de coleta, transformação e distribuição de dados**, fornecendo insights cruciais para a tomada de decisões de forma consistente e eficiente.
-
-Como Analista e Desenvolvedor de Sistemas em formação, apliquei neste projeto conhecimentos aprofundados em engenharia de dados e automação, focando em entregar um sistema que não apenas gere relatórios, mas que o faça de maneira **inteligente, escalável e com mínima intervenção manual**.
+Como Analista e Desenvolvedor de Sistemas em formação, apliquei neste projeto, conhecimentos aprofundados em engenharia de dados e automação, focando em entregar um sistema que não apenas gere relatórios, mas que o faça de maneira **inteligente, escalável e com mínima intervenção manual**.
 
 ---
 
@@ -43,8 +42,8 @@ Para sua equipe técnica ou para iniciar a operação desta solução:
 
 1.  **Clone o Repositório:** Obtenha a base do código da solução.
     ```bash
-    git clone [https://github.com/SeuUsuario/NomeDoSeuRepositorio.git](https://github.com/SeuUsuario/NomeDoSeuRepositorio.git)
-    cd NomeDoSeuRepositorio
+    git clone [https://github.com/lfnje/Automa-o-de-Relat-rios-Empresariais.git](https://github.com/lfnje/Automa-o-de-Relat-rios-Empresariais.git)
+    cd Automa-o-de-Relat-rios-Empresariais
     ```
     *(Por favor, atualize `SeuUsuario/NomeDoSeuRepositorio` com o caminho real do nosso projeto.)*
 
@@ -80,6 +79,20 @@ python main.py
 
 Esta solução pode ser facilmente executada a partir do seu terminal integrado ou de qualquer outro ambiente onde o Python esteja configurado, proporcionando flexibilidade na implementação.
 
+---
+
+---
+
+---
+
+## 🤝 Colaboração e Suporte
+
+Incentivamos a colaboração e o feedback para a melhoria contínua desta solução. Para sugestões, reportar um comportamento inesperado ou propor novas funcionalidades, por favor, **não hesite em entrar em contato através das redes abaixo:**
+
+* **Email** - [lfnjecorporativo@gmail.com](mailto:lfnjecorporativo@gmail.com)
+* **Linkedln** - [Linkedln[]]
+
+---
 
 <p align="center">
   <em>“A tecnologia não só resolve problemas, como também cria oportunidades.”</em><br>
