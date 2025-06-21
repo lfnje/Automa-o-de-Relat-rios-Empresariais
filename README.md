@@ -76,6 +76,7 @@ Após a configuração, a operação é simples:
 
 ```bash
 python main.py
+```
 
 Esta solução pode ser facilmente executada a partir do seu terminal integrado ou de qualquer outro ambiente onde o Python esteja configurado, proporcionando flexibilidade na implementação.
 
