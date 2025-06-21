@@ -77,6 +77,9 @@ Após a configuração, a operação é simples:
 ```bash
 python main.py
 
+Esta solução pode ser facilmente executada a partir do seu terminal integrado ou de qualquer outro ambiente onde o Python esteja configurado, proporcionando flexibilidade na implementação.
+
+
 <p align="center">
   <em>“A tecnologia não só resolve problemas, como também cria oportunidades.”</em><br>
   <strong>Luiz Filipe Nogueira</strong>
