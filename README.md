@@ -63,7 +63,7 @@ Para sua equipe técnica ou para iniciar a operação desta solução:
 ### Estrutura da Solução
 
 <p align="center">
-  <img src="Estrutura_de_Solução.png" alt="Estrutura de Solução para Automação" style="width:100%; max-width:600px;">
+  <img src="img/Estrutura de Solução.png" alt="Estrutura de Solução para Automação" style="width:100%; max-width:600px;">
 </p>
 
 ---
