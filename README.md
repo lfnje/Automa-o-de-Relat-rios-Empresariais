@@ -90,6 +90,12 @@ Esta solução pode ser facilmente executada a partir do seu terminal integrado 
 
 ---
 
+## 📜 Licença
+
+Este projeto possui todos os direitos reservados, sendo proibida a reprodução, modificação ou distribuição de seu código e conteúdo sem a prévia autorização por escrito de [Seu Nome Completo]. Para qualquer uso ou esclarecimento, por favor, entre em contato. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
 ## 🤝 Colaboração e Suporte
 
 Incentivamos a colaboração e o feedback para a melhoria contínua desta solução. Para sugestões, reportar um comportamento inesperado ou propor novas funcionalidades, por favor, **não hesite em entrar em contato através das redes abaixo:**
