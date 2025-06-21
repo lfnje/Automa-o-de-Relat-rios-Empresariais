@@ -90,10 +90,6 @@ Esta solução pode ser facilmente executada a partir do seu terminal integrado 
 
 ---
 
----
-
----
-
 ## 🤝 Colaboração e Suporte
 
 Incentivamos a colaboração e o feedback para a melhoria contínua desta solução. Para sugestões, reportar um comportamento inesperado ou propor novas funcionalidades, por favor, **não hesite em entrar em contato através das redes abaixo:**
