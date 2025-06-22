@@ -1,0 +1,555 @@
+2025-06-19 23:29:01,997 - utils - INFO - Iniciando automação de relatórios empresariais...
+2025-06-19 23:29:01,998 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-19 23:29:02,000 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-19 23:29:02,005 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-19 23:29:02,006 - utils - INFO - Executando relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-19 23:29:02,006 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-19 23:29:02,007 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_06.xlsx
+2025-06-19 23:29:02,009 - processar_dados - ERROR - Erro: Arquivo não encontrado para transacoes - C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_06.xlsx.
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 66, in carregar_dados
+    df = pd.read_excel(caminho_arquivo)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+        content_or_path=path_or_buffer, storage_options=storage_options
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ~~~~~~~~~~^
+        content_or_path, "rb", storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handle:
+    ^
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\lfnje\\OneDrive\\Documentos\\Área de Trabalho\\VsCode - Geral\\Automação de Relatórios Empresariais\\data\\transacoes_2025_06.xlsx'
+2025-06-19 23:29:02,026 - utils - CRITICAL - Ocorreu um erro crítico durante a execução da automação: [Errno 2] No such file or directory: 'C:\\Users\\lfnje\\OneDrive\\Documentos\\Área de Trabalho\\VsCode - Geral\\Automação de Relatórios Empresariais\\data\\transacoes_2025_06.xlsx'
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\main.py", line 55, in main
+    dataframes_carregados = carregar_dados(caminhos_arquivos_entrada)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 66, in carregar_dados
+    df = pd.read_excel(caminho_arquivo)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+        content_or_path=path_or_buffer, storage_options=storage_options
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ~~~~~~~~~~^
+        content_or_path, "rb", storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handle:
+    ^
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\lfnje\\OneDrive\\Documentos\\Área de Trabalho\\VsCode - Geral\\Automação de Relatórios Empresariais\\data\\transacoes_2025_06.xlsx'
+2025-06-19 23:56:33,221 - utils - INFO - Iniciando automação de relatórios empresariais...
+2025-06-19 23:56:33,222 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-19 23:56:33,224 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-19 23:56:33,228 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-19 23:56:33,229 - utils - INFO - Executando relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-19 23:56:33,229 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-19 23:56:33,229 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_06.xlsx
+2025-06-19 23:56:33,770 - processar_dados - ERROR - Erro de estrutura de dados em transacoes: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 76, in carregar_dados
+    df_padronizado = _padronizar_e_validar_colunas(df, colunas_esperadas, nome_fonte)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 33, in _padronizar_e_validar_colunas
+    raise KeyError(f"Coluna essencial '{coluna_logica}' (aliases: {aliases}) não encontrada no arquivo de {nome_df}.")
+KeyError: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+2025-06-19 23:56:33,777 - utils - CRITICAL - Ocorreu um erro crítico durante a execução da automação: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\main.py", line 55, in main
+    dataframes_carregados = carregar_dados(caminhos_arquivos_entrada)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 76, in carregar_dados
+    df_padronizado = _padronizar_e_validar_colunas(df, colunas_esperadas, nome_fonte)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 33, in _padronizar_e_validar_colunas
+    raise KeyError(f"Coluna essencial '{coluna_logica}' (aliases: {aliases}) não encontrada no arquivo de {nome_df}.")
+KeyError: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+2025-06-20 00:12:48,021 - utils - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 00:12:48,022 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 00:12:48,024 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 00:12:48,028 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 00:12:48,028 - utils - INFO - Executando relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 00:12:48,028 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 00:12:48,028 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_06.xlsx
+2025-06-20 00:12:48,345 - processar_dados - ERROR - Erro de estrutura de dados em transacoes: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 76, in carregar_dados
+    df_padronizado = _padronizar_e_validar_colunas(df, colunas_esperadas, nome_fonte)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 33, in _padronizar_e_validar_colunas
+    raise KeyError(f"Coluna essencial '{coluna_logica}' (aliases: {aliases}) não encontrada no arquivo de {nome_df}.")
+KeyError: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+2025-06-20 00:12:48,351 - utils - CRITICAL - Ocorreu um erro crítico durante a execução da automação: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\main.py", line 55, in main
+    dataframes_carregados = carregar_dados(caminhos_arquivos_entrada)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 76, in carregar_dados
+    df_padronizado = _padronizar_e_validar_colunas(df, colunas_esperadas, nome_fonte)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 33, in _padronizar_e_validar_colunas
+    raise KeyError(f"Coluna essencial '{coluna_logica}' (aliases: {aliases}) não encontrada no arquivo de {nome_df}.")
+KeyError: "Coluna essencial 'cliente' (aliases: ['cliente', 'ID Cliente', 'Cód. Cliente', 'Nome do Cliente', 'Customer ID']) não encontrada no arquivo de transacoes."
+2025-06-20 17:54:42,975 - utils - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 17:54:42,977 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 17:54:42,978 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 17:54:42,983 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 17:54:42,984 - utils - INFO - Executando relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 17:54:42,984 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 17:54:42,984 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_06.xlsx
+2025-06-20 17:54:43,273 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 17:54:43,274 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_06.xlsx
+2025-06-20 17:54:43,286 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 17:54:43,287 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 17:54:43,287 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 17:54:43,302 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}
+2025-06-20 17:54:43,325 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_06.xlsx
+2025-06-20 17:54:43,326 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, filipeesperanca50@gmail.com...
+2025-06-20 17:54:43,397 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2025_06.xlsx' anexado ao e-mail.
+2025-06-20 17:54:43,397 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-20 17:54:44,466 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-20 17:54:46,688 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-20 17:54:46,901 - utils - INFO - Automação concluída com sucesso!
+2025-06-20 18:31:26,723 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 18:31:26,724 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 18:31:26,725 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 18:31:26,729 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 18:31:50,165 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 18:31:50,166 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 18:31:50,166 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 18:31:50,166 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 18:31:51,001 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 18:31:51,002 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 18:31:51,325 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 18:31:51,326 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 18:31:51,327 - processar_dados - INFO - Iniciando processamento dos dados para o relatório...
+2025-06-20 18:31:51,327 - processar_dados - INFO - Realizando merge de transações com dados de cadastro.
+2025-06-20 18:31:51,333 - processar_dados - WARNING - Nenhuma coluna para agrupar especificada. O relatório não será agrupado.
+2025-06-20 18:31:51,334 - processar_dados - INFO - Processamento de dados concluído para o relatório.
+2025-06-20 18:31:51,335 - __main__ - WARNING - O processamento de dados para o relatório 'vendas_por_cliente' não retornou dados ou retornou um DataFrame vazio. Pulando a geração do arquivo.
+2025-06-20 18:31:51,336 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-20 18:58:17,645 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 18:58:17,646 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 18:58:17,647 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 18:58:17,651 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 18:58:24,579 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 18:58:24,579 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 18:58:24,579 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 18:58:25,432 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 18:58:25,432 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 18:58:25,767 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 18:58:25,768 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 18:58:25,768 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 18:58:25,768 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 18:58:25,791 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'segmento', 'nome_completo'}. Elas serão ignoradas.
+2025-06-20 18:58:26,020 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 18:58:26,021 - __main__ - INFO - Envio de e-mail desabilitado para o relatório 'vendas_por_cliente'.
+2025-06-20 18:58:26,022 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-20 19:04:39,195 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 19:04:39,196 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 19:04:39,197 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 19:04:39,201 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 19:04:44,164 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 19:04:44,165 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 19:04:44,165 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 19:04:45,023 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 19:04:45,024 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 19:04:45,355 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 19:04:45,356 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 19:04:45,357 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 19:04:45,357 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 19:04:45,374 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}. Elas serão ignoradas.
+2025-06-20 19:04:45,601 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 19:04:45,602 - __main__ - INFO - Envio de e-mail desabilitado para o relatório 'vendas_por_cliente'.
+2025-06-20 19:04:45,603 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-20 19:10:34,441 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 19:10:34,442 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 19:10:34,443 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 19:10:34,447 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 19:10:39,947 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 19:10:39,947 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 19:10:39,947 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 19:10:40,795 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 19:10:40,795 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 19:10:41,113 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 19:10:41,114 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 19:10:41,114 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 19:10:41,115 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 19:10:41,129 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'segmento', 'nome_completo'}. Elas serão ignoradas.
+2025-06-20 19:10:41,373 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 19:10:41,374 - __main__ - INFO - Envio de e-mail desabilitado para o relatório 'vendas_por_cliente'.
+2025-06-20 19:10:41,375 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-20 19:28:54,654 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 19:28:54,655 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 19:28:54,657 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 19:28:54,661 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 19:29:02,505 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 19:29:02,506 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 19:29:02,506 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 19:29:02,757 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 19:29:02,758 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 19:29:02,765 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 19:29:02,766 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 19:29:02,767 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 19:29:02,768 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 19:29:02,776 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}. Elas serão ignoradas.
+2025-06-20 19:29:02,795 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 19:29:02,796 - enviar_email - INFO - Iniciando envio do e-mail para lfesperanca17@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-20 19:29:02,818 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2025_07.xlsx' anexado ao e-mail.
+2025-06-20 19:29:02,819 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-20 19:29:04,914 - enviar_email - ERROR - Erro de autenticação SMTP. Verifique seu EMAIL_REMETENTE e SENHA_APP. Detalhes: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-237d875382bsm25737345ad.254 - gsmtp')
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\enviar_email.py", line 76, in enviar_email_relatorio
+    smtp.login(EMAIL_REMETENTE, SENHA_APP)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-237d875382bsm25737345ad.254 - gsmtp')
+2025-06-20 19:29:04,922 - __main__ - CRITICAL - Ocorreu um erro crítico durante a execução da automação: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-237d875382bsm25737345ad.254 - gsmtp')
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\main.py", line 80, in main
+    enviar_email_relatorio(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        caminho_arquivo=caminho_relatorio_gerado,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        data_referencia_relatorio=data_referencia
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\enviar_email.py", line 76, in enviar_email_relatorio
+    smtp.login(EMAIL_REMETENTE, SENHA_APP)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-237d875382bsm25737345ad.254 - gsmtp')
+2025-06-20 19:57:25,823 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 19:57:25,823 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 19:57:25,826 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 19:57:25,830 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 19:57:42,610 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 19:57:42,610 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 19:57:42,611 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 19:57:43,009 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 19:57:43,009 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 19:57:43,016 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 19:57:43,018 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 19:57:43,018 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 19:57:43,019 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 19:57:43,034 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}. Elas serão ignoradas.
+2025-06-20 19:57:43,055 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 19:57:43,056 - enviar_email - INFO - Iniciando envio do e-mail para lfesperanca17@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-20 19:57:43,083 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2025_07.xlsx' anexado ao e-mail.
+2025-06-20 19:57:43,083 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-20 19:57:45,585 - enviar_email - ERROR - Erro de autenticação SMTP. Verifique seu EMAIL_REMETENTE e SENHA_APP. Detalhes: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3158a23e627sm5084302a91.18 - gsmtp')
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\enviar_email.py", line 76, in enviar_email_relatorio
+    smtp.login(EMAIL_REMETENTE, SENHA_APP)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3158a23e627sm5084302a91.18 - gsmtp')
+2025-06-20 19:57:45,600 - __main__ - CRITICAL - Ocorreu um erro crítico durante a execução da automação: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3158a23e627sm5084302a91.18 - gsmtp')
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\main.py", line 80, in main
+    enviar_email_relatorio(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        caminho_arquivo=caminho_relatorio_gerado,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        data_referencia_relatorio=data_referencia
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\enviar_email.py", line 76, in enviar_email_relatorio
+    smtp.login(EMAIL_REMETENTE, SENHA_APP)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lfnje\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3158a23e627sm5084302a91.18 - gsmtp')
+2025-06-20 20:04:20,446 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 20:04:20,446 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 20:04:20,448 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 20:04:20,452 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 20:04:26,550 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 20:04:26,551 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 20:04:26,551 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 20:04:27,367 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 20:04:27,368 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 20:04:27,584 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 20:04:27,585 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 20:04:27,586 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 20:04:27,587 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 20:04:27,606 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}. Elas serão ignoradas.
+2025-06-20 20:04:27,786 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 20:04:27,788 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-20 20:04:27,836 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2025_07.xlsx' anexado ao e-mail.
+2025-06-20 20:04:27,837 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-20 20:04:29,410 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-20 20:04:32,318 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-20 20:04:32,318 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-20 20:16:37,395 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 20:16:37,395 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 20:16:37,396 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 20:16:37,403 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 20:16:46,724 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 20:16:46,725 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 20:16:46,725 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 20:16:47,590 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 20:16:47,591 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 20:16:47,811 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 20:16:47,812 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 20:16:47,813 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 20:16:47,813 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 20:16:47,825 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}. Elas serão ignoradas.
+2025-06-20 20:16:48,002 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 20:16:48,003 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-20 20:16:48,054 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2025_07.xlsx' anexado ao e-mail.
+2025-06-20 20:16:48,054 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-20 20:16:49,147 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-20 20:16:56,746 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-20 20:16:56,746 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-20 20:37:39,886 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-20 20:37:39,886 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-20 20:37:39,888 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-20 20:37:39,892 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-20 20:37:46,199 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-20 20:37:46,199 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-20 20:37:46,200 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-20 20:37:47,156 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-20 20:37:47,156 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2025_07.xlsx
+2025-06-20 20:37:47,371 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-20 20:37:47,372 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-20 20:37:47,372 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-20 20:37:47,372 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-20 20:37:47,386 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'segmento', 'nome_completo'}. Elas serão ignoradas.
+2025-06-20 20:37:47,579 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2025_07.xlsx
+2025-06-20 20:37:47,579 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-20 20:37:47,627 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2025_07.xlsx' anexado ao e-mail.
+2025-06-20 20:37:47,627 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-20 20:37:48,581 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-20 20:38:00,636 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-20 20:38:00,636 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-21 01:07:53,829 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-21 01:07:53,830 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-21 01:07:53,831 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-21 01:07:53,836 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-21 01:08:02,579 - __main__ - INFO - Processando relatórios para o mês de 07/2025.
+2025-06-21 01:08:02,579 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-21 01:08:02,580 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2025_07.xlsx
+2025-06-21 01:08:02,581 - processar_dados - ERROR - Erro inesperado ao carregar os dados de transacoes: [Errno 13] Permission denied: 'C:\\Users\\lfnje\\OneDrive\\Documentos\\Área de Trabalho\\VsCode - Geral\\Automação de Relatórios Empresariais\\data\\transacoes_2025_07.xlsx'
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 72, in carregar_dados
+    df = pd.read_excel(caminho_arquivo)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+        content_or_path=path_or_buffer, storage_options=storage_options
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ~~~~~~~~~~^
+        content_or_path, "rb", storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handle:
+    ^
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\lfnje\\OneDrive\\Documentos\\Área de Trabalho\\VsCode - Geral\\Automação de Relatórios Empresariais\\data\\transacoes_2025_07.xlsx'
+2025-06-21 01:08:02,602 - __main__ - CRITICAL - Ocorreu um erro crítico durante a execução da automação: [Errno 13] Permission denied: 'C:\\Users\\lfnje\\OneDrive\\Documentos\\Área de Trabalho\\VsCode - Geral\\Automação de Relatórios Empresariais\\data\\transacoes_2025_07.xlsx'
+Traceback (most recent call last):
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\main.py", line 51, in main
+    dataframes_carregados = carregar_dados(caminhos_arquivos_entrada)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\processar_dados.py", line 72, in carregar_dados
+    df = pd.read_excel(caminho_arquivo)
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+        content_or_path=path_or_buffer, storage_options=storage_options
+    )
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ~~~~~~~~~~^
+        content_or_path, "rb", storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handle:
+    ^
+  File "C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\venv\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\lfnje\\OneDrive\\Documentos\\Área de Trabalho\\VsCode - Geral\\Automação de Relatórios Empresariais\\data\\transacoes_2025_07.xlsx'
+2025-06-21 03:41:41,501 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-21 03:41:41,503 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-21 03:41:41,505 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-21 03:41:41,511 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-21 03:41:49,654 - __main__ - INFO - Processando relatórios para o mês de 01/2023.
+2025-06-21 03:41:49,655 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-21 03:41:49,656 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2023_01.xlsx
+2025-06-21 03:41:50,043 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-21 03:41:50,043 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2023_01.xlsx
+2025-06-21 03:41:50,054 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-21 03:41:50,056 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-21 03:41:50,056 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-21 03:41:50,056 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-21 03:41:50,076 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}. Elas serão ignoradas.
+2025-06-21 03:41:50,105 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2023_01.xlsx
+2025-06-21 03:41:50,106 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-21 03:41:50,145 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2023_01.xlsx' anexado ao e-mail.
+2025-06-21 03:41:50,146 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-21 03:41:51,793 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-21 03:41:53,938 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-21 03:41:53,939 - __main__ - INFO - Executando relatório: detalhes_das_transacoes.
+2025-06-21 03:41:53,939 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório detalhado de todas as transações.
+2025-06-21 03:41:53,983 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\detalhes_das_transacoes_2023_01.xlsx
+2025-06-21 03:41:53,984 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-21 03:41:54,002 - enviar_email - INFO - Arquivo 'detalhes_das_transacoes_2023_01.xlsx' anexado ao e-mail.
+2025-06-21 03:41:54,003 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-21 03:41:55,566 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-21 03:41:57,751 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-21 03:41:57,751 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-21 03:57:08,914 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-21 03:57:08,915 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-21 03:57:08,916 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-21 03:57:08,922 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-21 03:58:09,151 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-21 03:58:09,151 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-21 03:58:09,154 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-21 03:58:09,158 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-21 03:58:13,467 - __main__ - INFO - Processando relatórios para o mês de 01/2005.
+2025-06-21 03:58:13,467 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-21 03:58:13,468 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2005_01.xlsx
+2025-06-21 03:58:13,704 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-21 03:58:13,705 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2005_01.xlsx
+2025-06-21 03:58:13,711 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-21 03:58:13,712 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-21 03:58:13,712 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-21 03:58:13,712 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-21 03:58:13,724 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'segmento', 'nome_completo'}. Elas serão ignoradas.
+2025-06-21 03:58:13,751 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2005_01.xlsx
+2025-06-21 03:58:13,753 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-21 03:58:13,783 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2005_01.xlsx' anexado ao e-mail.
+2025-06-21 03:58:13,783 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-21 03:58:15,274 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-21 03:59:54,696 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-21 03:59:54,696 - __main__ - INFO - Executando relatório: detalhes_das_transacoes.
+2025-06-21 03:59:54,697 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório detalhado de todas as transações.
+2025-06-21 03:59:54,717 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\detalhes_das_transacoes_2005_01.xlsx
+2025-06-21 03:59:54,718 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-21 03:59:54,737 - enviar_email - INFO - Arquivo 'detalhes_das_transacoes_2005_01.xlsx' anexado ao e-mail.
+2025-06-21 03:59:54,737 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-21 03:59:56,331 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-21 03:59:58,440 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-21 03:59:58,440 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-21 04:01:57,518 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-21 04:01:57,519 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-21 04:01:57,521 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-21 04:01:57,526 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-21 04:02:02,700 - __main__ - INFO - Processando relatórios para o mês de 01/2005.
+2025-06-21 04:02:02,701 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-21 04:02:02,701 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2005_01.xlsx
+2025-06-21 04:02:02,932 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-21 04:02:02,933 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2005_01.xlsx
+2025-06-21 04:02:02,939 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-21 04:02:02,940 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-21 04:02:02,941 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-21 04:02:02,941 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-21 04:02:02,946 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'segmento', 'nome_completo'}. Elas serão ignoradas.
+2025-06-21 04:02:02,962 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2005_01.xlsx
+2025-06-21 04:02:02,963 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-21 04:02:02,981 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2005_01.xlsx' anexado ao e-mail.
+2025-06-21 04:02:02,981 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-21 04:02:03,940 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-21 04:02:43,287 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-21 04:02:43,288 - __main__ - INFO - Executando relatório: detalhes_das_transacoes.
+2025-06-21 04:02:43,288 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório detalhado de todas as transações.
+2025-06-21 04:02:43,304 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\detalhes_das_transacoes_2005_01.xlsx
+2025-06-21 04:02:43,305 - enviar_email - INFO - Iniciando envio do e-mail para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-21 04:02:43,319 - enviar_email - INFO - Arquivo 'detalhes_das_transacoes_2005_01.xlsx' anexado ao e-mail.
+2025-06-21 04:02:43,319 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail...
+2025-06-21 04:02:44,493 - enviar_email - INFO - Login SMTP bem-sucedido.
+2025-06-21 04:02:46,550 - enviar_email - INFO - E-mail enviado com sucesso!
+2025-06-21 04:02:46,550 - __main__ - INFO - Automação de relatórios concluída com sucesso!
+2025-06-21 04:06:52,623 - __main__ - INFO - Iniciando automação de relatórios empresariais...
+2025-06-21 04:06:52,624 - utils - INFO - Verificando/criando diretórios necessários...
+2025-06-21 04:06:52,625 - utils - INFO - Diretórios verificados/criados com sucesso.
+2025-06-21 04:06:52,631 - utils - INFO - Definições de relatórios carregadas com sucesso de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\config_reports\report_definitions.yaml
+2025-06-21 04:06:56,652 - __main__ - INFO - Processando relatórios para o mês de 01/2005.
+2025-06-21 04:06:56,652 - processar_dados - INFO - Iniciando carregamento dos dados de entrada...
+2025-06-21 04:06:56,653 - processar_dados - INFO - Carregando transacoes de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\transacoes_2005_01.xlsx
+2025-06-21 04:06:56,958 - processar_dados - INFO - Dados de transacoes carregados e padronizados com sucesso.
+2025-06-21 04:06:56,958 - processar_dados - INFO - Carregando cadastros de: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\data\cadastros_2005_01.xlsx
+2025-06-21 04:06:56,966 - processar_dados - INFO - Dados de cadastros carregados e padronizados com sucesso.
+2025-06-21 04:06:56,967 - processar_dados - INFO - Todos os dados de entrada carregados, padronizados e validados com sucesso!
+2025-06-21 04:06:56,967 - __main__ - INFO - Executando relatório: vendas_por_cliente.
+2025-06-21 04:06:56,967 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório gerencial de vendas agrupado por cliente.
+2025-06-21 04:06:56,973 - gerar_relatorio - WARNING - Algumas colunas de saída especificadas não foram encontradas no relatório final: {'nome_completo', 'segmento'}. Elas serão ignoradas.
+2025-06-21 04:06:56,991 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\vendas_por_cliente_2005_01.xlsx
+2025-06-21 04:06:56,992 - __main__ - INFO - Relatório 'vendas_por_cliente' adicionado à lista para envio consolidado.
+2025-06-21 04:06:56,992 - __main__ - INFO - Executando relatório: detalhes_das_transacoes.
+2025-06-21 04:06:56,992 - gerar_relatorio - INFO - Iniciando a geração do relatório: Relatório detalhado de todas as transações.
+2025-06-21 04:06:57,006 - gerar_relatorio - INFO - Relatório salvo com sucesso em: C:\Users\lfnje\OneDrive\Documentos\Área de Trabalho\VsCode - Geral\Automação de Relatórios Empresariais\relatorios\detalhes_das_transacoes_2005_01.xlsx
+2025-06-21 04:06:57,006 - __main__ - INFO - Relatório 'detalhes_das_transacoes' adicionado à lista para envio consolidado.
+2025-06-21 04:06:57,006 - __main__ - INFO - Iniciando envio do e-mail consolidado com 2 relatórios anexados.
+2025-06-21 04:06:57,007 - enviar_email - INFO - Iniciando envio do e-mail com múltiplos anexos para lfnjecorporativo@gmail.com, lfnjeesperanca@gmail.com...
+2025-06-21 04:06:57,027 - enviar_email - INFO - Arquivo 'vendas_por_cliente_2005_01.xlsx' anexado ao e-mail com múltiplos anexos.
+2025-06-21 04:06:57,038 - enviar_email - INFO - Arquivo 'detalhes_das_transacoes_2005_01.xlsx' anexado ao e-mail com múltiplos anexos.
+2025-06-21 04:06:57,039 - enviar_email - INFO - Conectando ao servidor SMTP do Gmail para múltiplos anexos...
+2025-06-21 04:06:58,624 - enviar_email - INFO - Login SMTP bem-sucedido para múltiplos anexos.
+2025-06-21 04:07:37,230 - enviar_email - INFO - E-mail com múltiplos anexos enviado com sucesso!
+2025-06-21 04:07:37,230 - __main__ - INFO - Automação de relatórios concluída com sucesso!

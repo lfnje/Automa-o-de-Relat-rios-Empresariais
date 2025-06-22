@@ -1,0 +1,110 @@
+# Caminho: Automação de Relatórios Empresariais/config_reports/report_definitions.yaml
+
+# Você pode definir múltiplos relatórios aqui, cada um com um nome único
+# Exemplo: 'vendas_por_cliente', 'produtos_mais_vendidos', 'desempenho_por_regiao'
+
+vendas_por_cliente:
+  descricao: "Relatório gerencial de vendas agrupado por cliente."
+  
+  # Quais DataFrames de entrada são necessários (correspondem às saídas de carregar_dados)
+  fontes_dados:
+    - nome: "transacoes" # Este nome deve corresponder à chave no dicionário retornado por carregar_dados
+    - nome: "cadastros"
+
+  # Configurações de junção (merge) entre os DataFrames, se houver
+  # A chave 'cliente' deve ser padronizada no _padronizar_e_validar_colunas
+  juncoes:
+    - esquerdo: "transacoes"
+      direito: "cadastros"
+      on: "cliente" # Coluna para juntar os DataFrames
+      how: "left"
+
+  # Processamento dos dados para gerar o relatório principal
+  processamento_relatorio:
+    agrupar_por: ["cliente"] # Colunas para o groupby
+    agregacoes: # O que agregar e qual função usar (sum, mean, count, max, min)
+      valor_total: # Nome da nova coluna agregada no relatório
+        coluna_origem: "valor" # Coluna a ser agregada
+        funcao: "sum"
+    
+    # Exemplo de como adicionar mais agregações:
+    # quantidade_total:
+    #   coluna_origem: "quantidade" # Se você tiver uma coluna 'quantidade'
+    #   funcao: "sum"
+
+  # Ordem e seleção das colunas finais no relatório EXCEL.
+  # Use os nomes LÓGICOS padronizados ou os nomes das agregações.
+  colunas_saida:
+    - "cliente"
+    - "nome_completo" # Viria do cadastro após a junção
+    - "segmento"      # Viria do cadastro após a junção
+    - "valor_total"   # Resultado da agregação
+
+  # Configurações de E-mail específicas para este relatório
+  email:
+    assunto: "Relatório de Vendas por Cliente - {{periodo_extenso}}" # {{periodo_extenso}} será substituído dinamicamente
+    corpo: |
+      Prezados(as),
+
+      Segue em anexo o relatório de vendas por cliente referente a {{periodo_extenso}}.
+      Esperamos que seja útil para sua análise.
+
+      Atenciosamente,
+      Equipe de Automação
+    enviar_email: true
+    # Destinatários podem ser definidos aqui OU no config.py globalmente.
+    # Se definido aqui, sobrescreve os destinatários globais para este relatório.
+    # destinatarios: ["destinatario_especifico_do_relatorio@empresa.com"]
+
+
+# -------------------------------------------------------------
+# NOVO RELATÓRIO: Detalhes das Transações
+# -------------------------------------------------------------
+detalhes_das_transacoes:
+  descricao: "Relatório detalhado de todas as transações."
+  
+  fontes_dados:
+    - nome: "transacoes" # Este relatório usa apenas o DataFrame de transações
+
+  # Para este relatório, não precisamos de junções nem de agrupamentos/agregações
+  # Se você quisesse filtrar, por exemplo, transações com valor > 100,
+  # você adicionaria uma seção 'filtros' em 'processamento_relatorio'.
+  processamento_relatorio:
+    # Não há 'agrupar_por' nem 'agregacoes' se você quer todos os detalhes.
+    # Se quiser, por exemplo, filtrar algumas linhas:
+    # filtros:
+    #   - coluna: "valor"
+    #     operador: ">"
+    #     valor: 500
+
+  # Colunas de saída que você quer ver no relatório.
+  # Use os nomes padronizados definidos no seu config.py.
+  # Baseado em gerar_dados_teste.py, as colunas seriam:
+  # 'ID Cliente', 'Valor Venda', 'Data Venda', 'Produto', 'Quantidade'
+  # Que, após padronização, se tornam:
+  # 'cliente', 'valor', 'data', 'produto', 'quantidade'
+  colunas_saida:
+    - "cliente"
+    - "data"
+    - "valor"
+    - "produto"
+    - "quantidade"
+
+  email:
+    assunto: "Relatório de Detalhes de Transações - {{periodo_extenso}}"
+    corpo: |
+      Prezados(as),
+
+      Segue em anexo o relatório detalhado de transações referente a {{periodo_extenso}}.
+      Esperamos que seja útil para sua análise.
+
+      Atenciosamente,
+      Equipe de Automação
+    enviar_email: true
+    # destinatarios: ["destinatario_transacoes@exemplo.com"] # Destinatários específicos para este relatório, se necessário
+
+# -------------------------------------------------------------
+# OUTRO POSSÍVEL NOVO RELATÓRIO: Resumo de Clientes
+# Se você quiser apenas o arquivo de cadastros
+# -------------------------------------------------------------
+    
