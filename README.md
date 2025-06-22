@@ -85,3 +85,20 @@ Após a configuração, a operação é simples:
 ```bash
 python main.py
 ```
+
+---
+
+## ✉️ Contato
+
+Se quiser mais informações, discutir possíveis colaborações ou oportunidades profissionais, sinta-se à vontade para me contatar pelas redes abaixo:
+
+* **LinkedIn:** [linkedin.com/in/luizfilipenogueira](https://www.linkedin.com/in/luizfilipenogueira/)
+* **Email:** [lfnjecorporativo@gmail.com](mailto:lfnjecorporativo@gmail.com)
+* **Instagram:** [instagram.com/_lfnje/](https://www.instagram.com/_lfnje/)
+
+---
+
+<p align="center">
+  <em>“A tecnologia não só resolve problemas, como também cria oportunidades.”</em><br>
+  <strong>Luiz Filipe Nogueira</strong>
+</p>
