@@ -63,7 +63,7 @@ Para sua equipe técnica ou para iniciar a operação desta solução:
 ### Estrutura da Solução
 
 <p align="center">
-    <img src="img/Estrutura de Solucao.png" alt="Estrutura de Diretórios do Projeto de Automação de Relatórios" style="width:100%; max-width:600px;">
+    <img src="img/Estrutura de Solução.png" alt="Estrutura de Diretórios do Projeto de Automação de Relatórios" style="width:75%; max-width:600px;">
 </p>
 
 ---
